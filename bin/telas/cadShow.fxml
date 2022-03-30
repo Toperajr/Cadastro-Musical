@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="cadShow">
+   <center>
+      <AnchorPane maxHeight="473.0" maxWidth="640.0" minHeight="376.0" minWidth="640.0" prefHeight="376.0" prefWidth="640.0" style="-fx-background-image: url('file:C:/source/background/musica.png');" styleClass="bodybg" stylesheets="@../../../Downloads/estilo.css" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="7.0" prefHeight="54.0" prefWidth="536.0" text="Definir show" textAlignment="JUSTIFY" textFill="#f3f5f8">
+               <font>
+                  <Font name="Berlin Sans FB" size="35.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtcache" layoutX="14.0" layoutY="112.0" promptText="Digite o cache do artista" />
+            <Label layoutX="14.0" layoutY="82.0" text="Pagamento do artista" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="btcadastrar" layoutX="14.0" layoutY="201.0" mnemonicParsing="false" onAction="#btcadastrar" text="Cadastrar" />
+            <Button fx:id="btcancelar" layoutX="101.0" layoutY="201.0" mnemonicParsing="false" onAction="#btcancelar" text="Cancelar" />
+            <TableView fx:id="tbartista" layoutX="213.0" layoutY="12.0" prefHeight="302.0" prefWidth="200.0">
+              <columns>
+                <TableColumn fx:id="clcantor" prefWidth="94.0" text="Cantor" />
+                <TableColumn fx:id="clgenero" prefWidth="105.0" text="Genero musical" />
+              </columns>
+            </TableView>
+            <TableView fx:id="tblocal" layoutX="433.0" layoutY="12.0" prefHeight="304.0" prefWidth="200.0">
+               <columns>
+                  <TableColumn fx:id="cllocal" prefWidth="105.0" text="Local" />
+                  <TableColumn fx:id="clturno" minWidth="0.0" prefWidth="94.0" text="Turno" />
+               </columns>
+            </TableView>
+            <TextField fx:id="txtdata" layoutX="14.0" layoutY="167.0" promptText="Digite a data do show" />
+            <Label layoutX="14.0" layoutY="137.0" text="Data do show" textFill="WHITE">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>
